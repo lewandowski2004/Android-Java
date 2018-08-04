@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Wydatki</title>
+        <link rel="stylesheet" href="js/data/jqm-datebox-1.4.5.min.css" />
+        <link type="text/css" rel="stylesheet" href="js/jquery.mobile-1.4.5.css" />
+        <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+        <script type="text/javascript" src="js/data/jqm-datebox-1.4.5.core.min.js"></script>
+        <script type="text/javascript" src="js/data/jqm-datebox-1.4.5.mode.calbox.min.js"></script>
+        <script type="text/javascript" src="js/data/jqm-datebox-1.4.5.mode.datebox.js"></script>
+        <script type="text/javascript" src="zakupy.js"></script>
+        <script type="text/javascript" src="db.js"></script>
+    </head>
+    <body>
+        <section id="home" data-role="page">
+            <header data-role="header"><h1>Wydatki</h1></header>
+            <div class="content" data-role="content"></div>
+                <div class="content" data-role="content">
+                    <ul data-role="listview" data-inset="true">
+                        <li><a id="0" href="#list" class="menu">Dzisiaj</a> </li>
+                        <li><a id="1" href="#list" class="menu">Od początku tygodnia</a> </li>
+                        <li><a id="2" href="#list" class="menu">Od początku miesiąca</a> </li>
+                        <li><a id="3" href="#list" class="menu">Od początku roku</a> </li>
+                        <li><a id="4" href="#list" class="menu">Wszystkie</a> </li>
+                    </ul>
+                </div>
+            <footer data-role="footer" data-position="fixed">
+                 <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#info" data-icon="info">O programie</a> </li>
+                        <li><a href="#new" data-icon="plus" data-rel="dialog">Nowy</a> </li>
+                        <li><a href="#settings" data-icon="gear">Ustawienia</a> </li>
+                    </ul>
+                </nav>
+            </footer>
+        </section>
+        <section id="shopping" data-role="page">
+            <header data-role="header"><h1>Zakupy</h1></header>
+            <div class="content" data-role="content"></div>
+        </section>
+        <section id="info" data-role="page">
+            <header data-role="header">
+                <a href="#home" data-icon="back" data-rel="back" title="Wstecz">Powrót</a>
+                <h1>O aplikacji</h1>
+            </header>
+            <div class="content" data-role="content">
+                <p>Aplikacja Zakupy umożliwia ewidencjonowanie wydatków użytkowników. Wszystkie dane zapisywane są w pamięci lokalnej i stanowią tajemnicę właściciela.</p>
+                <p>Aplikacja opracowana jest w ramach przemiotu Programowanie Aplikacji Mobilnych w Szkole Wyższej im. Pawła Włodkowica w Płocku na kierunku Informatyka</p>
+            </div>
+            <footer data-role="footer" data-position="fixed"><h1>SWPW - PAM 2018</h1></footer>
+        </section>
+        <section id="new" data-role="page">
+            <header data-role="header"><h1>Nowy zakup</h1></header>
+            <div class="content" data-role="content"></div>
+            <form method="post">
+                <div class="ui-field-contain">
+                    <label for="dat_zak">Data:</label>
+                    <input type="text" id="dat_zak" data-role="datebox" data-options= '{"mode":"calbox", "useInlineBlind":true, "useFocus":true, "showInitialValue":true, "beforeToday":true}' />
+                </div>
+                <div class="ui-field-contain">
+                    <label for="zakup">Zakup:</label>
+                    <input id="zakup" type="text" required />
+                </div>
+                <div class="ui-field-contain">
+                    <label for="kwota">Kwota:</label>
+                    <input id="kwota" type="number" min="0.01" step="0.01" required />
+                </div>
+                <input type="submit" name="action" value="Zapisz" data-icon="check" data-role="button" data-inline="true" />
+            </form>
+        </section>
+        <section id="settings" data-role="page">
+            <header data-role="header">
+                <a href="#home" data-icon="delete" data-rel="back" title="Wstecz">Anuluj</a>
+                <h1>Ustawienia</h1>
+                <form method="post">
+                    <label for="limit">Podaj miesięczny limit wydatków: </label>
+                    <input name="limit" id="limit" value="300" min="0" max="1000" step="50" data-highlight="true" type="range" />
+                    <input type="submit" name="action" value="Zapisz" data-icon="check" data-role="button" data-inline="true"/>
+                </form>
+            </header>
+            <div class="content" data-role="content"></div>
+        </section>
+    <section id="list" data-role="page">
+        <header data-role="header">
+            <a href="#home" data-icon="back" data-rel="back" title="Wstecz">Powrót</a>
+            <h1>Wydatki</h1>
+            <a href="#new" data-rel="dialog" data-icon="plus" title="Nowy wpis">Dodaj</a>
+        </header>
+        <div class="content" data-role="content">
+            <h4>Lista zakupów</h4>
+            <ul data-role="listview">
+                <li id="entryTemplate" class="entry" style="display:none">
+                    <span class="label">Wpis</span>
+                    <span class="separator">-</span>
+                    <span class="price">Cena</span>
+                    <span class="delete">Usuń</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    </body>
+</html>

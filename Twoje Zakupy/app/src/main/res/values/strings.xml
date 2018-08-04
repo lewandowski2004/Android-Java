@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Wydatki</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="tvData">Data:</string>
+    <string name="tvZakup">Zakup:</string>
+    <string name="tvKwota">Kwota:</string>
+    <string name="btnZapisz">Zapisz</string>
+    <string name="brakDaty">Pole daty nie może zostać puste.</string>
+    <string name="brakZakupu">Pole zakupu nie może zostać puste.</string>
+    <string name="brakKwoty">Pole kwoty nie może zostać puste.</string>
+    <string name="infoBaza">Wydatek dodany do bazy.</string>
+    <string name="opisDodawania">Dodawanie nowego wydatku</string>
+    <string name="miesiac">Od początku miesiąca</string>
+    <string name="dzis">Dzis</string>
+    <string name="tydzien">Od początku tygodnia</string>
+    <string name="rok">Od początku roku</string>
+    <string name="wszystko">Wszystkie</string>
+    <string name="przedmiot">Programowanie aplikacji mobilnych</string>
+    <string name="info">O programie</string>
+    <string name="exit">Koniec</string>
+    <string name="info_tv_1">Aplikacja Wydatki umożliwia ewidencjonowanie wydatków użytkowników. Wszystkie dane zapisywane są w pamięci lokalnej i stanowią tajemnicę właściciela.</string>
+    <string name="info_tv_2">Aplikacja opracowywana jest w ramach przedmiotu Programowanie Aplikacji
+        Mobilnych w Szkole Wyższej im Pawła Włodkowica w Płocku na kierunku Informatyka.</string>
+    <string name="info_tv_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas magna est, consectetur ac lacus at, tincidunt tempor arcu. Cras sollicitudin fringilla metus, eget ornare lorem porttitor varius. Nunc egestas finibus pharetra. Ut pulvinar tincidunt arcu eget dapibus. Sed vitae rhoncus neque. Aenean sagittis elit non aliquam ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse efficitur suscipit neque ultrices iaculis.</string>
+    <string name="tvNazwa">Nazwa</string>
+
+    <string name="listaZakupow">Lista Zakupów</string>
+</resources>
